@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Hang Up</string>
     <string name="login">Login</string>
+    <string name="home" />
+    <string name="search" />
+    <string name="upload" />
+    <string name="profile" />
+    <string name="username_here">UserName.here</string>
+    <string name="_10k">10K</string>
+    <string name="likes">Likes</string>
+    <string name="this_is_caption_of_the_post_which_is_shows_in_bottom_of_post">This is caption of the post which is shows in bottom of post</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

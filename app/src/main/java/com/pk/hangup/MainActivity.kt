@@ -1,9 +1,8 @@
 package com.pk.hangup
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import com.pk.hangup.databinding.ActivityMainBinding
 
@@ -13,9 +12,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
-        binding.idMainLoginBtn.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this,Login::class.java)
-            startActivity(intent)
-        })
     }
 }
