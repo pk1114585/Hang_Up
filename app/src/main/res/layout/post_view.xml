@@ -5,6 +5,9 @@
         <variable
             name="users"
             type="com.pk.hangup.mainUI.fragments.posts.Users" />
+        <variable
+            name="clickListener"
+            type="com.pk.hangup.mainUI.fragments.posts.PostClickListener" />
     </data>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -39,7 +42,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/idHeaderLayout"
-            android:src="@drawable/lb" />
+            android:src="@drawable/lb"
+            android:onClick="@{()->clickListener.onClick(users)}"
+            />
         <LinearLayout
             android:id="@+id/idBottomTools"
             android:layout_width="match_parent"

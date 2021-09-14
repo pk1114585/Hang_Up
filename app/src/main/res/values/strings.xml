@@ -10,4 +10,6 @@
     <string name="likes">Likes</string>
     <string name="this_is_caption_of_the_post_which_is_shows_in_bottom_of_post">This is caption of the post which is shows in bottom of post</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

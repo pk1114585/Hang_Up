@@ -4,9 +4,10 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.ScaleAnimation
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -18,6 +19,7 @@ import com.pk.hangup.databinding.PostViewFragmentBinding
 class PostViewFragment : Fragment() {
     private lateinit var binding:PostViewFragmentBinding
     private lateinit var viewModel: PostViewViewModel
+    private var clickCounter = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,10 +28,18 @@ class PostViewFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(PostViewViewModel::class.java)
 
         val mAdapter = PostAdapter(mutableListOf(
-            Users("Somesh"),
-            Users("pradeep"),
-            Users("pk")
-        ))
+            Users("Somesh"), Users("pradeep"), Users("pk")
+                    ,Users("faiyaz"), Users("vishal"), Users("kundan")
+        ), PostClickListener {
+            clickCounter += 1
+            Handler().postDelayed({
+                clickCounter = 0
+            }, 500)
+            if (clickCounter>1)
+            {
+                Toast.makeText(context,"PostLiked",Toast.LENGTH_SHORT).show()
+            }
+        })
         binding.idStoriesList.adapter = StoriesAdapter()
         binding.idStoriesList.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         binding.idPostList.layoutManager = LinearLayoutManager(context)

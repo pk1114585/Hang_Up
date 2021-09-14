@@ -24,6 +24,5 @@
             android:text="User"
             android:textAlignment="center"
             />
-
     </RelativeLayout>
 </layout>
