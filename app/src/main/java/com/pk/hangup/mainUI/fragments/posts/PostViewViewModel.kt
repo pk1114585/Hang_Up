@@ -1,7 +1,8 @@
 package com.pk.hangup.mainUI.fragments.posts
 
+import android.app.Application
 import androidx.lifecycle.ViewModel
 
-class PostViewViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class PostViewViewModel(private val application: Application) : ViewModel() {
+
 }

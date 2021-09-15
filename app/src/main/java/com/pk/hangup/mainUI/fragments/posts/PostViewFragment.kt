@@ -6,7 +6,6 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.ScaleAnimation
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -25,7 +24,7 @@ class PostViewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.post_view_fragment,container,false)
-        viewModel = ViewModelProvider(this).get(PostViewViewModel::class.java)
+        //viewModel = ViewModelProvider(this).get(PostViewViewModel::class.java)
 
         val mAdapter = PostAdapter(mutableListOf(
             Users("Somesh"), Users("pradeep"), Users("pk")

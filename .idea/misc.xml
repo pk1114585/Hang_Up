@@ -12,9 +12,12 @@
         <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/like_popup.xml" value="0.22467532467532467" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/round_shape.xml" value="0.2" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_main.xml" value="0.20854700854700856" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_login_service.xml" value="0.20219298245614034" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_sign_up.xml" value="0.20854700854700856" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/app_bar_main.xml" value="0.20854700854700856" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_login.xml" value="0.2" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_sign_up.xml" value="0.21403508771929824" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_user_profile.xml" value="0.21403508771929824" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/like_popup.xml" value="0.21403508771929824" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/post_view.xml" value="0.11607992388201713" />
