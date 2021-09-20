@@ -6,10 +6,14 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.view.animation.AnimationUtils.loadAnimation
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.pk.hangup.R
@@ -24,8 +28,6 @@ class PostViewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.post_view_fragment,container,false)
-        //viewModel = ViewModelProvider(this).get(PostViewViewModel::class.java)
-
         val mAdapter = PostAdapter(mutableListOf(
             Users("Somesh"), Users("pradeep"), Users("pk")
                     ,Users("faiyaz"), Users("vishal"), Users("kundan")
@@ -38,6 +40,10 @@ class PostViewFragment : Fragment() {
             {
                 Toast.makeText(context,"PostLiked",Toast.LENGTH_SHORT).show()
             }
+        },PostLikeIconView { view_ ->
+            Toast.makeText(context,"PostLiked",Toast.LENGTH_SHORT).show()
+            view_.startAnimation(AnimationUtils.loadAnimation(context,R.anim.like_icon_animation))
+            Handler().postDelayed({view_.animation = null},250)
         })
         binding.idStoriesList.adapter = StoriesAdapter()
         binding.idStoriesList.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
@@ -61,6 +67,9 @@ class PostViewFragment : Fragment() {
                 }
             }
         })
+        binding.include.idAddPostIcon.setOnClickListener {
+            findNavController().navigate(R.id.uploadPostFragment)
+        }
         binding.idPostList.adapter = mAdapter
         binding.idSwipeRefreshLayout.setOnRefreshListener {
             Handler().postDelayed({ // Stop animation (This will be after 3 seconds)

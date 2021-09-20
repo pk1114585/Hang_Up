@@ -12,5 +12,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="user">User</string>
+    <string name="hangup">HangUp</string>
+    <string name="new_post">New Post</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

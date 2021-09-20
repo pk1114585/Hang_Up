@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_fragment_navigation"
+    app:startDestination="@id/postViewFragment">
+
+    <fragment
+        android:id="@+id/postViewFragment"
+        android:name="com.pk.hangup.mainUI.fragments.posts.PostViewFragment"
+        android:label="PostViewFragment" />
+    <fragment
+        android:id="@+id/uploadPostFragment"
+        android:name="com.pk.hangup.mainUI.fragments.uploadNewPost.UploadPostFragment"
+        android:label="upload_post_fragment"
+        tools:layout="@layout/upload_post_fragment" />
+    <fragment
+        android:id="@+id/userProfile"
+        android:name="com.pk.hangup.mainUI.fragments.profile.UserProfile"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+</navigation>
