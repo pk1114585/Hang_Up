@@ -19,12 +19,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/idChatIcon"
+        android:id="@+id/idMenuIcon"
         android:layout_width="60dp"
         android:layout_height="match_parent"
         android:layout_marginEnd="16dp"
         android:padding="12dp"
-        android:src="@drawable/ic_chat_icon"
+        android:src="@drawable/ic_menu_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,7 +38,7 @@
         android:padding="10dp"
         android:src="@drawable/ic_add_post_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/idChatIcon"
+        app:layout_constraintEnd_toStartOf="@+id/idMenuIcon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 

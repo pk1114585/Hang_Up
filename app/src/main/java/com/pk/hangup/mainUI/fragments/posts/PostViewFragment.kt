@@ -70,6 +70,9 @@ class PostViewFragment : Fragment() {
         binding.include.idAddPostIcon.setOnClickListener {
             findNavController().navigate(R.id.uploadPostFragment)
         }
+        binding.include.idChatIcon.setOnClickListener(View.OnClickListener {
+            Toast.makeText(context,"Chat clicked",Toast.LENGTH_SHORT).show()
+        })
         binding.idPostList.adapter = mAdapter
         binding.idSwipeRefreshLayout.setOnRefreshListener {
             Handler().postDelayed({ // Stop animation (This will be after 3 seconds)

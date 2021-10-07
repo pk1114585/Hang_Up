@@ -7,12 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".LoginServiceActivity">
     <fragment
-        android:name="com.pk.hangup.loginService.fragments.Login"
+        android:id="@+id/loginActivityScreenFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph = "@navigation/login_activity_navigation"
+        app:defaultNavHost="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+    </fragment>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,4 +19,14 @@
         android:name="com.pk.hangup.mainUI.fragments.profile.UserProfile"
         android:label="fragment_user_profile"
         tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.pk.hangup.mainUI.resource.cameraFragment.CameraFragment"
+        android:label="camera_fragment"
+        tools:layout="@layout/camera_fragment" />
+    <fragment
+        android:id="@+id/notification"
+        android:name="com.pk.hangup.mainUI.fragments.notification.Notification"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
 </navigation>

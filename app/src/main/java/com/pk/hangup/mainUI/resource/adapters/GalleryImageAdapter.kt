@@ -27,7 +27,7 @@ class GalleryImageAdapter(private val list:MutableList<ImageData>):
         fun bind(item:ImageData)
         {
             binding.imageData = item
-            Picasso.get().load(item.uri).resize(100,100).centerCrop().into(binding.imageView)
+            //Picasso.get().load(item.uri).resize(100,100).centerCrop().into(binding.imageView)
             binding.executePendingBindings()
         }
         companion object{

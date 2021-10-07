@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "433565187809",
+    "project_id": "hang-up-5b539",
+    "storage_bucket": "hang-up-5b539.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433565187809:android:034f39a0c229932a7d41a0",
+        "android_client_info": {
+          "package_name": "com.pk.hangup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433565187809-l0qpah0auqp5k73csjfaanqvlhhu5epq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKaiJlWpn4I2d91Jw6NUaAFIjRGn-N1Ug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433565187809-l0qpah0auqp5k73csjfaanqvlhhu5epq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

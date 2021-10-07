@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_activity_navigation"
+    app:startDestination="@id/signUp">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.pk.hangup.loginService.fragments.Login"
+        android:label="Login" />
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.pk.hangup.loginService.fragments.SignUp"
+        android:label="SignUp" />
+</navigation>

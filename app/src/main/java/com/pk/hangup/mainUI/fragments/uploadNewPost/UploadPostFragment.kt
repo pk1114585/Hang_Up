@@ -1,17 +1,36 @@
 package com.pk.hangup.mainUI.fragments.uploadNewPost
 
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.EntityIterator
+import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.os.Environment
+import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
+import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
+import com.pk.hangup.R
 import com.pk.hangup.databinding.UploadPostFragmentBinding
 import com.pk.hangup.mainUI.resource.adapters.GalleryImageAdapter
+import com.squareup.picasso.Picasso
+import java.io.File
+import java.lang.Exception
+import java.text.SimpleDateFormat
+import java.util.*
 
 class UploadPostFragment : Fragment() {
     private lateinit var viewModel: UploadPostViewModel
@@ -35,7 +54,38 @@ class UploadPostFragment : Fragment() {
 
             }
         })
+        binding.idUploadFromWebCam.idImageFromCamera.setOnClickListener {
+            startIntentForImageCap()
+        }
+        binding.idUploadPostAppBar.idCloseView.setOnClickListener {
+            findNavController().navigate(R.id.postViewFragment)
+        }
+        binding.idUploadPostAppBar.idNextView.setOnClickListener {
+
+        }
         return binding.root
     }
 
+    private fun startIntentForImageCap()
+    {
+        val intent  =  Intent(MediaStore.ACTION_IMAGE_CAPTURE).also {
+
+        }
+        cameraResultLauncher.launch(intent)
+    }
+    private val cameraResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+    { result ->
+        if (result.data!=null) {
+            val data: Bitmap? = result.data!!.getParcelableExtra("data")
+            if (data != null) {
+                binding.idUploadFromWebCam.idImageFromCamera.setImageBitmap(data)
+            }else
+                Log.i("main activity ","image not loaded ")
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+    }
 }

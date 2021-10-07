@@ -10,6 +10,7 @@ import android.provider.MediaStore
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.pk.hangup.mainUI.resource.adapters.ImageData
 import kotlinx.coroutines.*
 import java.util.*
@@ -32,14 +33,14 @@ class UploadPostViewModel(private val contentResolver: ContentResolver?) : ViewM
                 MediaStore.VOLUME_EXTERNAL
             )
         } else {
-            MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI
         }
         val projection  = arrayOf(
             MediaStore.Images.Media.DISPLAY_NAME,
             MediaStore.Images.Media._ID
         )
         val selection = "${MediaStore.Images.Media.DATE_ADDED} >= ?"
-        val selectionArg = arrayOf<String>(
+        val selectionArg = arrayOf(
             getDaysAgo(-30)  // 1 week ago
         )
 
@@ -58,7 +59,7 @@ class UploadPostViewModel(private val contentResolver: ContentResolver?) : ViewM
                 val contentUri:Uri = ContentUris.withAppendedId(
                     MediaStore.Images.Media.EXTERNAL_CONTENT_URI,id
                 )
-                imageList.add(ImageData(name,contentUri))
+                imageList.add(ImageData(name,contentUri.toString()))
                 Log.i("upload view model",name)
             }
         }
@@ -66,7 +67,7 @@ class UploadPostViewModel(private val contentResolver: ContentResolver?) : ViewM
     }
     fun getAllImages()
     {
-        launch(Dispatchers.Main){
+        viewModelScope.launch{
             imagesLiveData.value = withContext(Dispatchers.IO)
             {
                 Log.i("upload view model","query called")

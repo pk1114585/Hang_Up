@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/loginImage">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/loginemailtext"
+            android:id="@+id/idLoginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/loginpassword"
+            android:id="@+id/idLoginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -57,8 +57,16 @@
             android:inputType="textImeMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <ProgressBar
+        android:id="@+id/idLoadingProgress"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
     <Button
-        android:id="@+id/loginbutton"
+        android:id="@+id/idLoginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -70,9 +78,8 @@
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
-
     <TextView
-        android:id="@+id/loginsignup"
+        android:id="@+id/loginToSignUp"
         android:layout_width="107dp"
         android:layout_height="33dp"
         android:layout_marginStart="16dp"
@@ -84,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/loginbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/idLoginBtn" />
 
     <TextView
         android:id="@+id/textView"
@@ -95,6 +102,6 @@
         android:text="You don't have account"
         android:textColor="#0C0C0C"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/idLoginBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

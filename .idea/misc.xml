@@ -11,30 +11,40 @@
         <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/ic_coment_icon.xml" value="0.2189873417721519" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/ic_comment_icon.xml" value="0.22179487179487178" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/ic_love_icon.xml" value="0.2189873417721519" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/ic_menu_icon.xml" value="0.21481481481481482" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/ic_share_icon.xml" value="0.22179487179487178" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/ic_upload_post_icon.xml" value="0.2189873417721519" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/like_popup.xml" value="0.22467532467532467" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/drawable/round_shape.xml" value="0.2" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_login_service.xml" value="0.20219298245614034" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_login_service.xml" value="0.136" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_sign_up.xml" value="0.20854700854700856" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/activity_splash.xml" value="0.16486486486486487" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/app_bar_main.xml" value="0.20854700854700856" />
-        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_login.xml" value="0.2" />
-        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_sign_up.xml" value="0.21403508771929824" />
-        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_user_profile.xml" value="0.21403508771929824" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/camera_fragment.xml" value="0.15574324324324323" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/camera_ui_container.xml" value="0.16486486486486487" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_login.xml" value="0.136" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_notification.xml" value="0.16486486486486487" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_sign_up.xml" value="0.176" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/fragment_user_profile.xml" value="0.264" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/image_gallery_view.xml" value="0.16486486486486487" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/like_popup.xml" value="0.21403508771929824" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/post_fragment_appbar.xml" value="0.16" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/post_view.xml" value="0.2" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/post_view_fragment.xml" value="0.20854700854700856" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/profile_app_bar.xml" value="0.176" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/profile_dashboard.xml" value="0.2" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/profile_dashbord.xml" value="0.2" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/single_image_view.xml" value="0.16486486486486487" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/small_cam_viewer.xml" value="0.16486486486486487" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/story_view.xml" value="0.19519927536231885" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/upload_post_appbar.xml" value="0.1" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/layout/upload_post_fragment.xml" value="0.2" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/menu/bottom_main_menu.xml" value="0.20854700854700856" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/menu/profile_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Git/Hang_Up/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22179487179487178" />
+        <entry key="..\:/Git/Hang_Up/app/src/main/res/mipmap-anydpi-v26/ic_my_profile_round.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/pk111/AndroidStudioProjects/HangUp/app/src/main/res/layout/activity_login.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/pk111/AndroidStudioProjects/HangUp/app/src/main/res/layout/activity_main.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/pk111/AndroidStudioProjects/HangUp/app/src/main/res/layout/activity_sign_up.xml" value="0.20380434782608695" />
