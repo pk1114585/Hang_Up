@@ -4,14 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.PopupMenu
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.pk.hangup.LoginServiceActivity
 import com.pk.hangup.R
 import com.pk.hangup.databinding.FragmentUserProfileBinding
 
-class UserProfile : Fragment() {
+class UserProfile : Fragment(),PopupMenu.OnMenuItemClickListener {
     private lateinit var binding:FragmentUserProfileBinding
     private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreateView(
@@ -27,15 +26,15 @@ class UserProfile : Fragment() {
     }
     private fun showMenu(v:View)
     {
-        PopupMenu(requireContext(),v).apply {
+        PopupMenu(context,v).apply {
+            setOnMenuItemClickListener(this@UserProfile)
             inflate(R.menu.profile_menu)
             show()
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        super.onOptionsItemSelected(item)
-        return when(item.itemId)
+    override fun onMenuItemClick(item: MenuItem?): Boolean {
+        return when(item?.itemId)
         {
             R.id.idSettings->{true}
             R.id.idLogOut->{
