@@ -78,4 +78,6 @@ dependencies {
 
     //WindowManager
     implementation 'androidx.window:window:1.0.0-beta02'
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+
 }
