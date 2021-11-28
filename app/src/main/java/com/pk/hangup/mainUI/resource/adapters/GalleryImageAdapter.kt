@@ -4,9 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.pk.hangup.databinding.SingleImageViewBinding
-import com.squareup.picasso.Picasso
 
-class GalleryImageAdapter(private val list:MutableList<ImageData>):
+class GalleryImageAdapter(private val list:MutableList<ImageData>,private val selectClickListener: GalleryImageSelectClickListener):
     RecyclerView.Adapter<GalleryImageAdapter.ImageViewHolder>() {
     val items = list
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ImageViewHolder {
@@ -14,7 +13,7 @@ class GalleryImageAdapter(private val list:MutableList<ImageData>):
     }
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
-        holder.bind(items[position])
+        holder.bind(items[position],selectClickListener)
     }
 
     override fun getItemCount(): Int {
@@ -24,10 +23,10 @@ class GalleryImageAdapter(private val list:MutableList<ImageData>):
     class ImageViewHolder private constructor(private val binding:SingleImageViewBinding):
         RecyclerView.ViewHolder(binding.root)
     {
-        fun bind(item:ImageData)
+        fun bind(item:ImageData,selectClickListener: GalleryImageSelectClickListener)
         {
             binding.imageData = item
-            //Picasso.get().load(item.uri).resize(100,100).centerCrop().into(binding.imageView)
+            binding.selectListener = selectClickListener
             binding.executePendingBindings()
         }
         companion object{
@@ -38,5 +37,12 @@ class GalleryImageAdapter(private val list:MutableList<ImageData>):
                 return ImageViewHolder(view)
             }
         }
+    }
+}
+class  GalleryImageSelectClickListener(private val selectClickListener:(uri: String)->Unit)
+{
+    fun onSelect(uri:String)
+    {
+        return selectClickListener(uri)
     }
 }

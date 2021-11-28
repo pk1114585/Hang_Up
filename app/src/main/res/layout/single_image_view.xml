@@ -5,6 +5,9 @@
 
     <data>
         <variable
+            name="selectListener"
+            type="com.pk.hangup.mainUI.resource.adapters.GalleryImageSelectClickListener" />
+        <variable
             name="imageData"
             type="com.pk.hangup.mainUI.resource.adapters.ImageData" />
     </data>
@@ -16,6 +19,7 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:onClick="@{()->selectListener.onSelect(imageData.uri)}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

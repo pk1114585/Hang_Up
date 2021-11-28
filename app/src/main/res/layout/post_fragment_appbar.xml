@@ -7,12 +7,14 @@
     android:layout_height="60dp"
     android:background="@color/white"
     >
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:fontFamily="sans-serif-light"
+        android:fontFamily="@font/galada"
         android:padding="10dp"
         android:text="@string/hangup"
+        android:textColor="#3E3B3B"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

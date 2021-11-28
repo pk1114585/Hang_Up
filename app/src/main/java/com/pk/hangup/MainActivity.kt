@@ -20,17 +20,27 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.menu_home_navigation->{
-                    if (navController.currentDestination?.id!=R.id.postViewFragment)
-                    navController.navigate(R.id.postViewFragment)
+                    if (navController.currentDestination?.id!=R.id.postViewFragment){
+                        navController.navigate(R.id.postViewFragment)
+                    }
                 }
-                R.id.menu_search_navigation->{}
+                R.id.menu_search_navigation->{
+                    if(navController.currentDestination?.id!=R.id.searchFragment)
+                    {
+                        navController.navigate(R.id.searchFragment)
+                    }
+                }
                 R.id.menu_notification_navigation->{
                     if (navController.currentDestination?.id!=R.id.notification)
-                    navController.navigate(R.id.notification)
+                    {
+                        navController.navigate(R.id.notification)
+                    }
                 }
                 R.id.menu_profile_navigation->{
                     if (navController.currentDestination?.id!=R.id.userProfile)
-                    navController.navigate(R.id.userProfile)
+                    {
+                        navController.navigate(R.id.userProfile)
+                    }
                 }
             }
             true

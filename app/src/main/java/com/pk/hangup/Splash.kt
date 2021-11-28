@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.google.firebase.auth.FirebaseAuth
+import com.pk.hangup.commons.AppPermissions
 
 class Splash : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
@@ -13,6 +14,9 @@ class Splash : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         supportActionBar?.hide()
         firebaseAuth = FirebaseAuth.getInstance()
+        loadAppScreens()
+    }
+    private fun loadAppScreens(){
         if (firebaseAuth.currentUser?.uid!=null)
         {
             Handler().postDelayed(Runnable {

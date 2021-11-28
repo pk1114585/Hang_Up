@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="roboto_bold">bold</string>
+    <string name="roboto_italic">italic</string>
+    <string name="roboto_light">light</string>
+    <string name="roboto_medium">medium</string>
+    <string name="roboto_regular">regular</string>
+</resources>

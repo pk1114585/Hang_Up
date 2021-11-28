@@ -1,9 +1,7 @@
 package com.pk.hangup.mainUI.fragments.uploadNewPost
 
-import android.app.Application
 import android.content.ContentResolver
 import android.content.ContentUris
-import android.database.Cursor
 import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
@@ -47,7 +45,6 @@ class UploadPostViewModel(private val contentResolver: ContentResolver?) : ViewM
         //  4. how to sort: ASC or DESC
         val sortOrder = "${MediaStore.Images.Media.DATE_ADDED} DESC"
         val query = contentResolver?.query(collection,projection,selection,selectionArg,sortOrder)
-        Log.i("upload view model",query?.count.toString())
         query?.use { cursor ->
             val nameColumn = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DISPLAY_NAME)
             val idColumn = cursor.getColumnIndexOrThrow(MediaStore.Images.Media._ID)
@@ -60,7 +57,6 @@ class UploadPostViewModel(private val contentResolver: ContentResolver?) : ViewM
                     MediaStore.Images.Media.EXTERNAL_CONTENT_URI,id
                 )
                 imageList.add(ImageData(name,contentUri.toString()))
-                Log.i("upload view model",name)
             }
         }
         return imageList

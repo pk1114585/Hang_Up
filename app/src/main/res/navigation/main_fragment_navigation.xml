@@ -29,4 +29,13 @@
         android:name="com.pk.hangup.mainUI.fragments.notification.Notification"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/uploadNext"
+        android:name="com.pk.hangup.mainUI.fragments.uploadNewPost.UploadNext"
+        android:label="fragment_upload_next"
+        tools:layout="@layout/fragment_upload_next" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.pk.hangup.mainUI.fragments.search.SearchFragment"
+        android:label="SearchFragment" />
 </navigation>
